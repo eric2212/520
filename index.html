@@ -37,7 +37,7 @@
             <span class="say"> </span><br>
             <span class="say"> Tôi không thể so sánh với bạn trong việc tìm kiếm núi và thung lũng, và tôi không hối tiếc ngay cả khi tôi ôm trụ cột</span><br>
             <span class="say"></span><br>
-            <span class="say">傻猪猪，我爱你，虽然你说我没有给你一个仪式感的告白</span><br>
+            <span class="say">Con heo ngốc, anh yêu em, mặc dù em nói anh không cho em một nghi lễ tỏ tình</span><br>
             <span class="say"></span><br>
             <span class="say">Tôi biết tôi không có nhiều khả năng để mang lại cho bạn bất cứ điều gì bây giờ</span><br>
             <span class="say"></span><br>
@@ -173,7 +173,7 @@
         foot.draw();
         tree.snapshot("p2", 500, 0, 610, 680);
 
-        // 会有闪烁不得意这样做, (＞﹏＜)
+        // Sẽ có hiện tượng nhấp nháy. Đừng làm như vậy., (＞﹏＜)
         canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
         canvas.css("background", "#ffe");
         $await(Jscex.Async.sleep(300));
@@ -192,11 +192,11 @@
 
       var textAnimate = eval(Jscex.compile("async", function () {
         var together = new Date();
-        together.setFullYear(2020, 2, 27); 			//时间年月日
-        together.setHours(16);						//小时	
-        together.setMinutes(53);					//分钟
-        together.setSeconds(0);					//秒前一位
-        together.setMilliseconds(2);				//秒第二位
+        together.setFullYear(2020, 2, 27); 			//Thời gian Năm Tháng Ngày
+        together.setHours(16);						//Giờ
+        together.setMinutes(53);					//phút
+        together.setSeconds(0);					//Vài giây trước
+        together.setMilliseconds(2);				//Giây
 
         $("#code").show().typewriter();
         $("#clock-box").fadeIn(500);
