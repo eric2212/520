@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -25,201 +25,197 @@
 </head>
 
 <body>
-  <audio controls autoplay>
-    <source src="520.mp3" type="audio/mpeg">
-  </audio>
   <div id="main">
     <div id="error">Trang này được chỉnh sửa bằng HTML5. Trình duyệt của bạn hiện không thể hiển thị trang này. Vui lòng chuyển sang phiên bản mới nhất của Chrome hoặc Firefox hoặc các trình duyệt khác.。</div>
     <div id="wrap">
       <div id="text">
         <div id="code">
-          <font color="#FF0000"> <span class="say">Tôi có thể vượt qua núi, sông và các vì sao, nhưng tôi không thể vượt qua nụ cười hay cái nhíu mày của bạn</span><br>
+          <font color="#FF0000"> <span class="say">Từ khi anh gặp em, anh cảm thấy mình cần phải thay đổi rất nhiều để có thể được sánh bước cùng em.</span><br>
             <span class="say"> </span><br>
-            <span class="say"> Tôi không thể so sánh với bạn trong việc tìm kiếm núi và thung lũng, và tôi không hối tiếc ngay cả khi tôi ôm trụ cột</span><br>
+            <span class="say"> Mặc dù để thay đổi một con người là rất khó, nhưng anh sẽ cố gắng hết sức vì nụ cười hạnh phúc của em.</span><br>
             <span class="say"></span><br>
-            <span class="say">Con heo ngốc, anh yêu em, mặc dù em nói anh không cho em một nghi lễ tỏ tình</span><br>
+            <span class="say">Miu ơi, anh thương em, mặc dù anh không hoàn hảo, anh không đẹp, anh không giàu, nhưng anh vẫn muốn được thương yêu, quan tâm, chăm sóc em hiện tại và sau này.</span><br>
             <span class="say"></span><br>
-            <span class="say">Tôi biết tôi không có nhiều khả năng để mang lại cho bạn bất cứ điều gì bây giờ</span><br>
+            <span class="say">anh biết anh không có nhiều khả năng để mang lại cho em bất cứ điều gì bây giờ</span><br>
             <span class="say"></span><br>
-            <span class="say">Nhưng tôi sẽ chứng minh mọi thứ bằng hành động của mình！</span><br>
+            <span class="say">Nhưng anh sẽ chứng minh mọi thứ bằng hành động của mình！</span><br>
             <span class="say"></span><br>
-            <span class="say">Chúng ta sẽ có một tương lai tốt đẹp hơn！</span><br>
-            <span class="say"></span><br>
-            <span class="say"> Đừng quên, tôi đã đặt hàng và hứa sẽ hỗ trợ bạn trọn đời.</span><br>
-            <span class="say"></span><br>
-            <span class="say"> Chúng ta vẫn còn một chặng đường dài phía trước, hãy cùng nhau nỗ lực vì tương lai tốt đẹp hơn！</span><br>
-            <span class="say"></span><br>
-            <span class="say"></span><br>
-            <span class="say"><span class="space"></span> --- Yêu em heo con --- </span> </font>
+            <span class="say"><span class="space"></span> --- anh yêu em --- </span> </font>
           </p>
         </div>
       </div>
       <div id="clock-box"> <span class="STYLE1"></span>
-        <font color="#ff5e04">miu xinh, ah yêu bé </font> <span class="STYLE1">Đã……</span>
+        <font color="#ff5e04">Miu ơi, anh thương ebe </font> <span class="STYLE1">Đã được……</span>
         <div id="clock"></div>
       </div>
       <canvas id="canvas" width="1100" height="680"></canvas>
     </div>
   </div>
-  <script>
-  </script>
-  <script>
+  <audio id="background-music" src="520.mp3" type="audio/mpeg"></audio>
+
+<script>
     (function () {
-      var canvas = $('#canvas');
+        var canvas = $('#canvas');
 
-      if (!canvas[0].getContext) {
-        $("#error").show();
-        return false;
-      }
-
-      var width = canvas.width();
-      var height = canvas.height();
-      canvas.attr("width", width);
-      canvas.attr("height", height);
-      var opts = {
-        seed: {
-          x: width / 2 - 20,
-          color: "rgb(190, 26, 37)",
-          scale: 2
-        },
-        branch: [
-          [535, 680, 570, 250, 500, 200, 30, 100, [
-            [540, 500, 455, 417, 340, 400, 13, 100, [
-              [450, 435, 434, 430, 394, 395, 2, 40]
-            ]],
-            [550, 445, 600, 356, 680, 345, 12, 100, [
-              [578, 400, 648, 409, 661, 426, 3, 80]
-            ]],
-            [539, 281, 537, 248, 534, 217, 3, 40],
-            [546, 397, 413, 247, 328, 244, 9, 80, [
-              [427, 286, 383, 253, 371, 205, 2, 40],
-              [498, 345, 435, 315, 395, 330, 4, 60]
-            ]],
-            [546, 357, 608, 252, 678, 221, 6, 100, [
-              [590, 293, 646, 277, 648, 271, 2, 80]
-            ]]
-          ]]
-        ],
-        bloom: {
-          num: 700,
-          width: 1080,
-          height: 650,
-        },
-        footer: {
-          width: 1200,
-          height: 5,
-          speed: 10,
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;
         }
-      }
 
-      var tree = new Tree(canvas[0], width, height, opts);
-      var seed = tree.seed;
-      var foot = tree.footer;
-      var hold = 1;
-
-      canvas.click(function (e) {
-        var offset = canvas.offset(), x, y;
-        x = e.pageX - offset.left;
-        y = e.pageY - offset.top;
-        if (seed.hover(x, y)) {
-          hold = 0;
-          canvas.unbind("click");
-          canvas.unbind("mousemove");
-          canvas.removeClass('hand');
+        var width = canvas.width();
+        var height = canvas.height();
+        canvas.attr("width", width);
+        canvas.attr("height", height);
+        var opts = {
+            seed: {
+                x: width / 2 - 20,
+                color: "rgb(190, 26, 37)",
+                scale: 2
+            },
+            branch: [
+                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    ]],
+                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    ]],
+                    [539, 281, 537, 248, 534, 217, 3, 40],
+                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [498, 345, 435, 315, 395, 330, 4, 60]
+                    ]],
+                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [590, 293, 646, 277, 648, 271, 2, 80]
+                    ]]
+                ]]
+            ],
+            bloom: {
+                num: 700,
+                width: 1080,
+                height: 650,
+            },
+            footer: {
+                width: 1200,
+                height: 5,
+                speed: 10,
+            }
         }
-      }).mousemove(function (e) {
-        var offset = canvas.offset(), x, y;
-        x = e.pageX - offset.left;
-        y = e.pageY - offset.top;
-        canvas.toggleClass('hand', seed.hover(x, y));
-      });
 
-      var seedAnimate = eval(Jscex.compile("async", function () {
-        seed.draw();
-        while (hold) {
-          $await(Jscex.Async.sleep(10));
-        }
-        while (seed.canScale()) {
-          seed.scale(0.95);
-          $await(Jscex.Async.sleep(10));
-        }
-        while (seed.canMove()) {
-          seed.move(0, 2);
-          foot.draw();
-          $await(Jscex.Async.sleep(10));
-        }
-      }));
+        var tree = new Tree(canvas[0], width, height, opts);
+        var seed = tree.seed;
+        var foot = tree.footer;
+        var hold = 1;
 
-      var growAnimate = eval(Jscex.compile("async", function () {
-        do {
-          tree.grow();
-          $await(Jscex.Async.sleep(10));
-        } while (tree.canGrow());
-      }));
+        canvas.click(function (e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            if (seed.hover(x, y)) {
+                hold = 0;
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
 
-      var flowAnimate = eval(Jscex.compile("async", function () {
-        do {
-          tree.flower(2);
-          $await(Jscex.Async.sleep(10));
-        } while (tree.canFlower());
-      }));
+                // Thêm tính năng phát nhạc khi click
+                var audio = document.getElementById("background-music");
+                if (audio.paused) {
+                    audio.play().catch(error => console.error("Lỗi phát nhạc:", error));
+                }
+            }
+        }).mousemove(function (e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            canvas.toggleClass('hand', seed.hover(x, y));
+        });
 
-      var moveAnimate = eval(Jscex.compile("async", function () {
-        tree.snapshot("p1", 240, 0, 610, 680);
-        while (tree.move("p1", 500, 0)) {
-          foot.draw();
-          $await(Jscex.Async.sleep(10));
-        }
-        foot.draw();
-        tree.snapshot("p2", 500, 0, 610, 680);
+        var seedAnimate = eval(Jscex.compile("async", function () {
+            seed.draw();
+            while (hold) {
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canScale()) {
+                seed.scale(0.95);
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canMove()) {
+                seed.move(0, 2);
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+        }));
 
-        // Sẽ có hiện tượng nhấp nháy. Đừng làm như vậy., (＞﹏＜)
-        canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
-        canvas.css("background", "#ffe");
-        $await(Jscex.Async.sleep(300));
-        canvas.css("background", "none");
-      }));
+        var growAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.grow();
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canGrow());
+        }));
 
-      var jumpAnimate = eval(Jscex.compile("async", function () {
-        var ctx = tree.ctx;
-        while (true) {
-          tree.ctx.clearRect(0, 0, width, height);
-          tree.jump();
-          foot.draw();
-          $await(Jscex.Async.sleep(25));
-        }
-      }));
+        var flowAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.flower(2);
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canFlower());
+        }));
 
-      var textAnimate = eval(Jscex.compile("async", function () {
-        var together = new Date();
-        together.setFullYear(2024, 12, 12); 			//Thời gian Năm Tháng Ngày
-        together.setHours(16);						//Giờ
-        together.setMinutes(53);					//phút
-        together.setSeconds(0);					//Vài giây trước
-        together.setMilliseconds(2);				//Giây
+        var moveAnimate = eval(Jscex.compile("async", function () {
+            tree.snapshot("p1", 240, 0, 610, 680);
+            while (tree.move("p1", 500, 0)) {
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+            foot.draw();
+            tree.snapshot("p2", 500, 0, 610, 680);
 
-        $("#code").show().typewriter();
-        $("#clock-box").fadeIn(500);
-        while (true) {
-          timeElapse(together);
-          $await(Jscex.Async.sleep(1000));
-        }
-      }));
+            // Sẽ có hiện tượng nhấp nháy. Đừng làm như vậy., (＞﹏＜)
+            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+            canvas.css("background", "#ffe");
+            $await(Jscex.Async.sleep(300));
+            canvas.css("background", "none");
+        }));
 
-      var runAsync = eval(Jscex.compile("async", function () {
-        $await(seedAnimate());
-        $await(growAnimate());
-        $await(flowAnimate());
-        $await(moveAnimate());
+        var jumpAnimate = eval(Jscex.compile("async", function () {
+            var ctx = tree.ctx;
+            while (true) {
+                tree.ctx.clearRect(0, 0, width, height);
+                tree.jump();
+                foot.draw();
+                $await(Jscex.Async.sleep(25));
+            }
+        }));
 
-        textAnimate().start();
+        var textAnimate = eval(Jscex.compile("async", function () {
+            var together = new Date();
+            together.setFullYear(2024, 11, 11); // năm, tháng-1, ngày-1
+            together.setHours(16);
+            together.setMinutes(53);
+            together.setSeconds(0);
+            together.setMilliseconds(2);
 
-        $await(jumpAnimate());
-      }));
+            $("#code").show().typewriter();
+            $("#clock-box").fadeIn(500);
+            while (true) {
+                timeElapse(together);
+                $await(Jscex.Async.sleep(1000));
+            }
+        }));
 
-      runAsync().start();
+        var runAsync = eval(Jscex.compile("async", function () {
+            $await(seedAnimate());
+            $await(growAnimate());
+            $await(flowAnimate());
+            $await(moveAnimate());
+
+            textAnimate().start();
+
+            $await(jumpAnimate());
+        }));
+
+        runAsync().start();
     })();
-  </script>
+</script>
 </body>
 
 </html>
