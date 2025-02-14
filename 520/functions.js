@@ -37,24 +37,28 @@ $(window).resize(function() {
 	};
 })(jQuery);
 
-function timeElapse(date){
-	var current = Date();
-	var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
-	var days = Math.floor(seconds / (3600 * 24));
-	seconds = seconds % (3600 * 24);
-	var hours = Math.floor(seconds / 3600);
-	if (hours < 10) {
-		hours = "0" + hours;
-	}
-	seconds = seconds % 3600;
-	var minutes = Math.floor(seconds / 60);
-	if (minutes < 10) {
-		minutes = "0" + minutes;
-	}
-	seconds = seconds % 60;
-	if (seconds < 10) {
-		seconds = "0" + seconds;
-	}
-	var result = "<span class=\"digit\">" + days + "</span> Ngày <span class=\"digit\">" + hours + "</span> Giờ <span class=\"digit\">" + minutes + "</span> phút <span class=\"digit\">" + seconds + "</span> giây"; n
-	$("#clock").html(result);
+function timeElapse(date) {
+  var current = new Date(); // Lấy thời gian hiện tại đúng cách
+  var seconds = Math.floor((current - new Date(date)) / 1000);
+
+  var days = Math.floor(seconds / (3600 * 24));
+  seconds %= (3600 * 24);
+
+  var hours = Math.floor(seconds / 3600);
+  seconds %= 3600;
+
+  var minutes = Math.floor(seconds / 60);
+  seconds %= 60;
+
+  // Định dạng giá trị thành 2 chữ số
+  hours = hours.toString().padStart(2, '0');
+  minutes = minutes.toString().padStart(2, '0');
+  seconds = seconds.toString().padStart(2, '0');
+
+  var result = ` <span class="digit">${days}</span> Ngày 
+                   <span class="digit">${hours}</span> Giờ 
+                   <span class="digit">${minutes}</span> Phút 
+                   <span class="digit">${seconds}</span> Giây`;
+
+  $("#clock").html(result);
 }
